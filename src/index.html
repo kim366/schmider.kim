@@ -41,6 +41,10 @@
 			justify-content: space-around;
 		}
 
+		.unloaded {
+			visibility: hidden;
+		}
+
 		header, main {
 			margin-bottom: 3rem;
 		}
@@ -184,7 +188,7 @@
 		}
 	</style>
 </head>
-<body>
+<body class="unloaded" onload="document.body.className = null">
 	<div id="outer">
 		<header role="banner">
 			<h1>Kim Schmider</h1>
