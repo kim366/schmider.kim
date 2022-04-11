@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kim Schmider</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+	
+		:root {
+			--background-color: #000;
+			--foreground-color: #eee;
+			--logo-color: #e5e5e5;
+			--border-color: #35393B;
+			--link-color: #E10301;
+			--link-hover-color: #F7330C;
+			--link-active-color: #ED510C;
+
+			background-color: var(--background-color);
+			color: var(--foreground-color);
+			font-family: 'Source Code Pro', monospace;
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			margin-top: 6rem;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		header, main {
+			margin-bottom: 3rem;
+		}
+
+		header, main, footer {
+			padding: 3rem;
+			border: 10px solid var(--border-color);
+		}
+
+		#outer {
+			max-width: 1000px;
+		}
+
+		main {
+			position: relative;
+		}
+
+		footer {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		#copyright {
+			margin-top: 3rem;
+			text-align: center;
+			padding: 1em;
+		}
+
+		h1 {
+			margin: 0;
+		}
+
+		a {
+			color: var(--link-color);
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: var(--link-hover-color);
+		}
+
+		a:active {
+			color:  var(--link-active-color);
+		}
+
+		td:first-child {
+			width: 25ch;
+			padding-right: 2rem;
+		}
+
+		td:last-child {
+			min-width: 40ch;
+		}
+
+		table {
+			display: block;
+			overflow-x: auto;
+		}
+
+		p {
+			margin-top: 0;
+		}
+
+		[role="doc-subtitle"] {
+			font-size: 1.3rem;
+		}
+
+		[role="note"] {
+			font-style: italic;
+		}
+
+		[role="note"]::before {
+			content:  '(';
+		}
+
+		[role="note"]::after {
+			content: ')';
+		}
+
+		#email::before {
+			content: '[';
+		}
+
+		#email::after {
+			content:  ']';
+		}
+
+		#logo-wrapper {
+			flex-shrink: 0;
+			min-width: 300px;
+			text-align: right;
+		}
+
+		#logo {
+			max-width: 100%;
+			height: 0;
+			min-height: 100%;
+			fill: var(--logo-color);
+		}
+
+		#outgoing {
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 5rem;
+			height: 5rem;
+			fill: var(--logo-color);
+			padding: .5rem;
+		}
+	</style>
+</head>
+<body>
+	<div id="outer">
+		<header role="banner">
+			<h1>Kim Schmider</h1>
+			<div role="doc-subtitle">Student &amp; Software Engineer <span role="note">he/him</span></div>
+		</header>
+		<main role="main">
+			<p>
+				I am a student of <a href="https://www.tuwien.at/en/studies/studies/master-programmes/computational-science-and-engineering" target="_blank" rel="noopener">Computational Science and Engineering</a> at the <a href="https://www.tuwien.at/en/" target="_blank" rel="noopener">Vienna University of Technology</a>. On the side, I am a part-time software engineer working with low-level protocols such as UPC UA, CAN bus, and Profinet supporting various industrial projects.
+			</p>
+
+			<p>
+				Computer Science in the supporting role for various scientific fields is of particular interest to me. Many simulations employ high-performance computing (HPC) techniques to simulate natural phenomena and to solve complex mathematical problems. My focus in these fields lies in Numerical Weather Prediction (NWP) and Computational Fluid Dynamics (CFD). Climate research is backed by both of these fields which provide an understanding of the effects of climate change and aid to prevent them through renewable engery research and geoengineering.
+			</p>
+
+			<h2>Curriculum Vitae</h2>
+			<table>
+				<tr><td>2018</td>
+				<td>Matura at Bundesrealgymnasium Salzburg</td></tr>
+				<tr><td>2018-2021</td>
+				<td>Bachelor of Science in Computer Science at Paris Lodron University of Salzburg</td></tr>
+				<tr><td>2019-</td>
+				<td>Software Engineer <span role="note">part-time</span></td></tr>
+				<tr><td>2021-</td>
+				<td>Master of Science in Computational Science and Engineering at Technical University of Vienna</td></tr>
+				<tr><td>2022-2023 <span role="note">upcoming</span></td>
+				<td>Exchange year at University Of New South Wales</td></tr>
+			</table>
+
+			<h2>Languages</h2>
+			<table>
+				<tr><td>German</td>
+				<td>Mother-tongue</td></tr>
+				<tr><td>English</td>
+				<td>C2 proficiency <span role="note">CAE Grade A in 2018, CPE Grade A in 2022</span></td></tr>
+				<tr><td>Polish</td>
+				<td>Mother-tongue</td></tr>
+			</table>
+		</main>
+		<footer>
+			<div>
+				Kim Schmider<br>
+				<a href="#" id="email" onclick="showMail(this, event)">click to show email address</a><br>
+				Pappenheimgasse 1<br>
+				1200 Wien<br>
+				Austria
+			</div>
+			<div id="logo-wrapper">
+				<svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 904.556 606.026">
+					<path d="M104.82 600.69c2.583-2.922 18.617-21.906 35.63-42.188 52.718-62.843 60.962-72.5 61.884-72.5.491 0 6.106 6.328 12.476 14.062 6.37 7.734 28.765 34.734 49.766 60l38.183 45.938h64.761c60.238 0 64.914-.154 66.949-2.207 1.203-1.214 26.375-31.121 55.938-66.461 75.247-89.952 73.582-87.993 75.303-88.54 1.224-.39 1.621 16.154 1.875 78.045l.322 78.539 49.147.327c27.03.18 49.875-.101 50.764-.625.889-.524 10.816-11.921 22.06-25.327s33.682-40.131 49.86-59.39c16.18-19.257 36.325-43.248 44.766-53.313 14.833-17.686 18.705-21.873 19.317-20.888.159.256.58 36.184.937 79.84l.649 79.376h98.75l.317-158.05c.252-125.61 0-158.25-1.25-159.04-.862-.547-23.342-1.004-49.954-1.014l-48.387-.02-4.299 4.688c-2.364 2.578-15.369 17.906-28.898 34.062-104.73 125.05-102.61 122.58-103.44 121.13-.159-.278-.58-36.225-.937-79.881l-.648-79.375-48.351-.327-48.351-.327-3.09 2.827c-1.7 1.555-45.397 53.733-97.107 115.95-51.71 62.219-95.952 115.09-98.317 117.5-4.27 4.344-4.315 4.357-6.417 1.832-1.165-1.4-17.282-20.524-35.815-42.5a79305.667 79305.667 0 0 1-47.847-56.778c-7.783-9.252-13.884-17.513-13.56-18.36.325-.845 22.077-27.266 48.337-58.713s47.807-58.061 47.882-59.141c.122-1.759-6.513-2-63.145-2.289l-63.282-.324-4.219 4.752c-2.32 2.613-31.39 36.93-64.6 76.26s-60.913 71.51-61.562 71.51c-.736 0-1.18-82.255-1.18-218.6 0-183.26-.276-218.83-1.708-220.01C103.103.124 88.203-.183 51.517.05L.412.377l-.32 301.25c-.176 165.69-.054 301.95.273 302.81.461 1.213 11.66 1.562 50.178 1.562h49.585zm213.55-360.25c11.805-3.142 20.347-8.176 29.634-17.463 20.458-20.458 25.054-49.278 12.076-75.721-4.502-9.173-18.864-23.443-28.01-27.83-26.832-12.871-54.873-8.333-75.411 12.205-20.494 20.494-25.092 48.891-12.245 75.625 4.337 9.025 18.835 23.527 27.87 27.876 14.407 6.936 32.25 8.99 46.086 5.308z"/>
+				</svg>
+			</div>
+		</footer>
+		<div id="copyright">
+			&copy; Kim Schmider 2022
+		</div>
+	</div>
+	<aside id="outgoing">
+		<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)"/>
+		</svg>
+	</aside>
+	<script type="text/javascript">
+		function showMail($mail, event) {
+			event.preventDefault();
+			const mailEncoded = 'ifmmpAtdinjefs/ljn';
+			const mail = [...mailEncoded].map(x => String.fromCharCode(x.charCodeAt(0) - 1)).join('');
+			$mail.onclick = null;
+			$mail.textContent = mail;
+			$mail.href = 'mailto:' + mail;
+			$mail.id = null;
+		}
+	</script>
+</body>
+</html>
