@@ -6,12 +6,11 @@
   "scripts": {
     "fetch-fonts": "wget https://fonts.gstatic.com/s/sourcecodepro/v20/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQtMlrTA.woff2 -O src/SourceCodePro.woff2 && wget https://fonts.gstatic.com/s/sourcecodepro/v20/HI_jiYsKILxRpg3hIP6sJ7fM7PqlOPHYvDP_W9O7GQTTbI1bTl0Y.woff2 -O src/SourceCodeProItalic.woff2",
     "dev": "snowpack dev",
-    "build": "npm run fetch-fonts && snowpack build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "snowpack": "^3.8.8"
   }
 }
